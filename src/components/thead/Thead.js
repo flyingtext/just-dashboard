@@ -26,11 +26,10 @@ import Wrapped from '../wrapped'
  * RowsComponent({'tagName': 'p'})(d3.selection())(...)
  */
 const TheadComponent = Wrapped((args, selection) => selection
-  // .append('tr')
-  // .attr('class', 'ds--tr')
+  .append('thead')
+  .attr('class', 'ds--thead')
 )(ContainerComponent({
-  'wrapper_tag': 'thead',
-  'wrapper_class': 'ds--thead'
+  'wrapper_tag': null
 }))
 
 export default TheadComponent

@@ -24,16 +24,16 @@ import Component from '../base'
  *
  * RowsComponent({'tagName': 'p'})(d3.selection())(...)
  */
-const ThComponent = Component({
-  'validators': [],
-  'init': (args, selection) => {
-    const item = selection.append('th').attr('class', 'ds--th')
-    if (args.hasOwnProperty('align'))
-      item.attr('data-align', args.align)
+ const ThComponent = Component({
+   'validators': [],
+   'init': (args, selection) => {
+     const item = selection.append('th').attr('class', 'ds--th')
+     if (args.hasOwnProperty('align'))
+       item.attr('data-align', args.align)
 
-    return item
-  },
-  'render': (args, selection, data, item) => item.html(data)
-})
+     return item
+   },
+   'render': (args, selection, data, item) => item.html(data)
+ })
 
 export default ThComponent

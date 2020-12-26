@@ -24,6 +24,7 @@ import Component from '../base'
  *
  * RowsComponent({'tagName': 'p'})(d3.selection())(...)
  */
+
 const TdComponent = Component({
   'validators': [],
   'init': (args, selection) => {
@@ -35,5 +36,14 @@ const TdComponent = Component({
   },
   'render': (args, selection, data, item) => item.html(data)
 })
+/*
+const TdComponent = Wrapped((args, selection) => selection
+  // .append('td')
+  // .attr('class', 'ds--td')
+)(ContainerComponent({
+  'wrapper_tag': 'td',
+  'wrapper_class': 'ds--td'
+}))
+*/
 
 export default TdComponent

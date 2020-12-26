@@ -26,11 +26,11 @@ import Wrapped from '../wrapped'
  * RowsComponent({'tagName': 'p'})(d3.selection())(...)
  */
 const TbodyComponent = Wrapped((args, selection) => selection
-  // .append('tbody')
-  // .attr('class', 'ds--tbody')
+  .append('tbody')
+  .attr('class', 'ds--tbody')
 )(ContainerComponent({
-  'wrapper_tag': 'tbody',
-  'wrapper_class': 'ds--tbody'
+  'wrapper_tag': null,
+  //'wrapper_class': 'ds--table'
 }))
 
 export default TbodyComponent

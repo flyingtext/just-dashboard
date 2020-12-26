@@ -25,12 +25,14 @@ import Wrapped from '../wrapped'
  *
  * RowsComponent({'tagName': 'p'})(d3.selection())(...)
  */
+
 const TrComponent = Wrapped((args, selection) => selection
-  // .append('tr')
-  // .attr('class', 'ds--tr')
+  .append('tr')
+  .attr('class', 'ds--tr')
+  // .attr('data-ds--tr', args.data.length)
 )(ContainerComponent({
-  'wrapper_tag': 'tr',
-  'wrapper_class': 'ds--tr'
+  'wrapper_tag': null,
+  // 'wrapper_class': 'ds--tr'
 }))
 
 export default TrComponent
